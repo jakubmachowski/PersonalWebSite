@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <script type="text/javascript" src="js/whcookies.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/javascript.js"></script>
+        <link rel="shortcut icon" href="img/crown.png" type="img/png" sizes="any"> 
+        <title>Jakub Machowski</title>
+    </head>
+    <body id="zoom-text">
+
+        <button onclick="topFunction()" id="myBtn" title="Do góry"><i class="arrow" id="arrow"></i></button>
+        <span id="myBtn-2"><img src="img/crown.png" alt="logo" height="25" width="25"></span>
+
+        <span id="sidenav_button" onclick="openNav()">
+            <span class="menu-button"></span>
+            <span class="menu-button"></span>
+            <span class="menu-button"></span>
+        </span>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#home">Home</a>
+            <a href="#omnie">O_mnie</a>
+            <a href="#projekty">Projekty</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+
+        <a name="home">
+            <div class="bgimg-1">
+                <span class="zoom-text-A" onclick="largeFontSize()">A</span>
+                <span class="zoom-text-Aa" onclick="normalFontSize()">A</span>
+                <span class="zoom-text-a" onclick="smallFontSize()">A</span>
+                <div class="caption">
+                    <span class="border">Jakub Machowski</span>
+                </div>
+            </div>
+        </a>
+
+        <a name="omnie">
+            <div class="white">
+                <h3>O mnie</h3>
+                <p>Nazywam się Jakub Machowski. Jestem studentem Politechniki Lubelskiej na kierunku informatycznym (<i>1-ego stopnia, niestacjonarne</i>).</p>
+                <ul>
+                    <li><b>WebDeveloping (<i>Front-end</i>):</b>.
+                        <ul>
+                            <li><b>HTML5 -</b> używam znaczników zgodznie ze standardem HTML5.</li>
+                            <li><b>CSS3 -</b> używam reguł zgodnie ze standardem CSS3.</li>
+                            <li><b>JavaScript -</b> piszę podstaowe skrypty.</li>
+                            <li><b>RWD -</b> wiem na czym polega i potrafię zastosować</li>
+                        </ul>
+                    </li>
+                    <li><b>Java -</b> jestem w trakcie pisania projektu. Zapraszam do śledzenia strony.</li>
+                    <li><b>Grafika komputerowa -</b> pracuję przy pomocy GIMP'a i Inkscape'a.</li>
+                </ul>
+                <p>Zapraszam do kontaktu i śledzenia strony ;)</p>
+            </div>
+        </a>
+
+        <div class="bgimg-2">
+            <div class="caption">
+                <span class="border" id="border-1">
+                    <span class="blockquote">
+                        To, że milczę, nie znaczy, że nie mam nic do powiedzenia.
+                        <cite>Jonathan Carroll</cite>
+                    </span>
+                </span>
+            </div>
+        </div>
+
+        <a name="projekty">
+            <div class="black">
+                <h3 id="projekty">Projekty</h3>
+                <img id="myImg" src="img/my_site.png" alt="Jakub Machowski, Personal WWW Site">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img src="brak.png" alt="nima" class="modal-content" id="img01">
+                    <div id="caption">
+                        Jakub Machowski, Personal WWW Site<br/>
+                        Strona projektu: <a href="http://www.jakubmachowski.pl" style="text-decoration: none; color: white;" target="_blank">www.jakubmachowski.pl</a>
+                    </div>
+                </div>
+                <br/><br/>
+            </div>
+        </a>
+
+        <div class="bgimg-3">
+            <div class="caption" id="bg-black">
+                <span class="border" id="border-2">
+                    <span class="blockquote" id="blockquote-2">
+                        Miej podejście właściwe studentom: nigdy nie bądź zbyt wielkim, by zadawać pytania,<br/> nigdy nie wiedz zbyt dużo, by nauczyć się czegoś nowego.
+                        <cite>Og Mandino</cite>
+                    </span>
+                </span>
+            </div>
+        </div>
+
+        <a name="kontakt">
+            <div class="black" id="black-form">
+                <h3 id="kontakt">Kontakt</h3>
+                E-mail: <a href="mailto:kontakt@jakubmachowski.pl" style="text-decoration: none; color: white;">kontakt@jakubmachowski.pl</a>
+                <br/><br/>
+                <div class="form">
+                    <form method="POST" name="myemailform" action="form-to-email.php">
+                        <label for='name'>Imię i nazwisko:</label>
+                        <input type="text" id="fname" name="name" placeholder="Twoje imie i nazwisko..." maxlength="70" required>
+
+                        <label for='email'>E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="Twój e-mail..." maxlength="40" required>
+
+                        <label for='subject'>Treść wiadomości:</label>
+                        <textarea id="subject" name="subject" placeholder="Napisz wiadomość..." style="height: 150px" maxlength="500" required></textarea>
+
+                        <input type="submit" name='submit' value="Wyślij">
+                        <input type="reset" value="Wyczyść">
+                    </form>
+                </div>
+                <br/><br/>
+            </div>
+        </a>
+
+        <div class="bgimg-1">
+            <div class="caption">
+
+            </div>
+            <footer>
+                Copyright&copy; 2017 <a href="http://www.jakubmachowski.pl" target="_blank" id="footer-link">jakubmachowski.pl</a>
+            </footer>
+        </div>
+
+        <script>
+            var modal = document.getElementById('myModal');
+            var img = document.getElementById('myImg');
+            var modalImg = document.getElementById("img01");
+            img.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.getElementById("caption");
+            }
+
+            var span = document.getElementsByClassName("close")[0];
+
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+        </script>
+
+    </body>
+</html>
